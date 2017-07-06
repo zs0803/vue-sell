@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<!-- 引入样式 -->
+	<!-- <link href="http://cdn.bootcss.com/element-ui/1.3.7/theme-default/index.css" rel="stylesheet"> -->
+	<!-- 引入组件库 -->
+	<script src="http://cdn.bootcss.com/element-ui/1.3.7/index.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <el-button @click="visible = true">按钮</el-button>
+    <el-dialog v-model="visible" title="Hello world">
+      <p>欢迎使用 Element</p>
+    </el-dialog>
+	</div>
+
+	<script>
+		new Vue({
+      el: '#app',
+      data: function() {
+        return { visible: false }
+      }
+    })
+	</script>
+</body>
+</html>
