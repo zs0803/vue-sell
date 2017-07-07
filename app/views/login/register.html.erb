@@ -11,13 +11,13 @@
               <input type="text" placeholder="用户名" class="form-control" name="usename">
             </div>
             <div style="margin-bottom: 25px" class="input-group">
-              <input type="password" placeholder="输入密码" class="form-control" name="password">
+              <input type="password" placeholder="输入密码" class="form-control" name="password" id="password">
             </div>
             <div style="margin-bottom: 25px" class="input-group">
-              <input type="password" placeholder="确认密码" class="form-control">
+              <input type="password" placeholder="确认密码" class="form-control" id="confirm_password">
             </div>
             <div style="margin-top:10px" class="form-group">
-              <input type="submit" value="注册" class="form-control btn btn-primary">
+              <input type="submit" value="注册" class="form-control btn btn-primary" id="submit_btn">
             </div>
           </div>
         </form>
@@ -28,3 +28,12 @@
     </div>
   </div>
 </div>
+<script>
+  $("#submit_btn").click(function(){
+    var password_val = $("#password").val();
+    var confirm_password_val = $("#confirm_password").val();
+    if (password_val != confirm_password_val) {
+      alert("俩次密码输入不相等，请重新输入")
+    }
+  })
+</script>
