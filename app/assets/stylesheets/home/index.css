@@ -7,3 +7,6 @@ a:hover{ text-decoration: none;}
 h1,h2,h3,h4,h5,h6{ margin:0; padding:0; font-weight:normal; font-size:14px;font-family:"Microsoft YaHei";}
 .auto_table tr th{ font-weight: normal; }
 .auto_setting {text-align: center; margin-top: 20px;}
+.row{margin-top: 20px;}
+.row input{ display: block; float: left; margin-left: 20px;}
+.row span{display: block; float: left; width: 200px; line-height: 18px;margin-left: 10px;}

@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require vue/vue.js
-//= require element/element.js
+//= require bootstrap/bootstrap.js

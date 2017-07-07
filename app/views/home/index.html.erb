@@ -3,80 +3,124 @@
 <head>
 	<meta charset="UTF-8">
 	<title>home</title>
-	<!-- 引入样式 -->
-	<link href="http://cdn.bootcss.com/element-ui/1.3.7/theme-default/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/home/index.css">
-	<!-- 引入组件库 -->
-	<script src="http://cdn.bootcss.com/element-ui/1.3.7/index.js"></script>
 </head>
 <body>
 	<div id="app">
 		<div class="auto_table">
-			<template>
-		    <el-table
-		      :data="tableData"
-		      style="width: 100%">
-		      <el-table-column
-		        prop="status"
-		        label="规则状态"
-		        width="180">
-		      </el-table-column>
-		      <el-table-column
-		        prop="money"
-		        label="投资金额"
-		        width="180">
-		      </el-table-column>
-		      <el-table-column
-		        prop="ketou"
-		        label="可投余额">
-		      </el-table-column>
-		      <el-table-column
-		        prop="term"
-		        label="项目期限">
-		      </el-table-column>
-		      <el-table-column
-		        prop="apr"
-		        label="年化收益率">
-		      </el-table-column>
-		      <el-table-column
-		        prop="absolute_ranking"
-		        label="绝对排名">
-		      </el-table-column>
-		      <el-table-column
-		        prop="effective_ranking"
-		        label="有效排名">
-		      </el-table-column>
-		    </el-table>
-		  </template>
+			<table class="table table-hover">
+			  <tr>
+			  	<td>{{msg}}</td>
+			  	<td>{{msg1}}</td>
+			  	<td>{{msg2}}</td>
+			  	<td>{{msg3}}</td>
+			  	<td>{{msg4}}</td>
+			  	<td>{{msg5}}</td>
+			  	<td>{{msg6}}</td>
+			  </tr>
+			  <tr>
+			  	<td>关</td>
+			  	<td>全部</td>
+			  	<td>无限制</td>
+			  	<td>无限制</td>
+			  	<td>无限制</td>
+			  	<td>123</td>
+			  	<td>1</td>
+			  </tr>
+			</table>
 		</div>
 		<div class="auto_setting">
-			<el-button type="primary">设置</el-button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">设置</button>
 		</div>
-		<el-switch
-		  v-model="value"
-		  on-color="#13ce66"
-		  off-color="#ff4949">
-		</el-switch>
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<h4 class="modal-title" id="gridSystemModalLabel">设置</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      </div>
+		      <div class="modal-body">
+					  <div class="row">
+					  	<span>投资金额： </span>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio" style="float:left">
+						    <input type="text" class="form-control" placeholder="输入投资金额" style="float:left; width:200px; ">
+						  </div>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio">
+						    <span>全部</span>
+						  </div>
+						</div>
+						<div class="row">
+					  	<span>可投余额： </span>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio1" style="float:left">
+						    <input type="text" class="form-control" placeholder="输入可投余额" style="float:left; width:200px; ">
+						  </div>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio1">
+						    <span>不限制</span>
+						  </div>
+						</div>
+						<div class="row">
+					  	<span>项目期限： </span>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio2" style="float:left">
+						    <input type="text" class="form-control" placeholder="输入项目期限" style="float:left; width:200px; ">
+						  </div>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio2">
+						    <span>不限制</span>
+						  </div>
+						</div>
+						<div class="row">
+					  	<span>年化收益率： </span>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio3" style="float:left">
+						    <input type="text" class="form-control" placeholder="输入年化收益率" style="float:left; width:200px; ">
+						  </div>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio3">
+						    <span>不限制</span>
+						  </div>
+						</div>
+						<div class="row">
+					  	<span>规则状态： </span>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio4" style="float:left">
+						  	<span>开</span>
+						  </div>
+						  <div class="col-xs-3">
+						  	<input type="radio" name="radio4" style="float:left">
+						  	<span>关</span>
+						  </div>
+						</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	</div>
-
-</body>
+	
 <script>
-		new Vue({
-      el: '#app',
-      data: function() {
-        return {
-          tableData: [{
-            status: '关',
-            money: '全部',
-            ketou: '无限制',
-            term: '无限制',
-            apr: '无限制',
-            absolute_ranking: '123',
-            effective_ranking: '1',
-          }],
-          value: true
-        }
+	new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        msg: '规则状态',
+        msg1: '投资金额',
+        msg2: '可投余额',
+        msg3: '项目期限',
+        msg4: '年化收益率',
+        msg5: '绝对排名',
+        msg6: '有效排名'
       }
-    })
-	</script>
+    }
+  })
+</script>
+</body>
+
 </html>

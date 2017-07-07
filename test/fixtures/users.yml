@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  status: MyString
+  touzi_money: MyString
+  ketou_money: MyString
+  term: MyString
+  apr: MyString
+  absolute_ranking: MyString
+  effective_ranking: MyString
+
+two:
+  user_id: MyString
+  status: MyString
+  touzi_money: MyString
+  ketou_money: MyString
+  term: MyString
+  apr: MyString
+  absolute_ranking: MyString
+  effective_ranking: MyString
