@@ -1,110 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>home</title>
-	<link rel="stylesheet" href="/assets/home/index.css">
-</head>
-<body>
-	<div id="app">
-		<div class="auto_table">
-			<table class="table table-hover">
-			  <tr>
-			  	<td>{{msg}}</td>
-			  	<td>{{msg1}}</td>
-			  	<td>{{msg2}}</td>
-			  	<td>{{msg3}}</td>
-			  	<td>{{msg4}}</td>
-			  	<td>{{msg5}}</td>
-			  	<td>{{msg6}}</td>
-			  </tr>
-			  <tr>
-			  	<td>关</td>
-			  	<td>全部</td>
-			  	<td>无限制</td>
-			  	<td>无限制</td>
-			  	<td>无限制</td>
-			  	<td>123</td>
-			  	<td>1</td>
-			  </tr>
-			</table>
-		</div>
-		<div class="auto_setting">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">设置</button>
-		</div>
-		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-		  <div class="modal-dialog modal-lg" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		      	<h4 class="modal-title" id="gridSystemModalLabel">设置</h4>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		      </div>
-		      <div class="modal-body">
-					  <div class="row">
-					  	<span>投资金额： </span>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio" style="float:left">
-						    <input type="text" class="form-control" placeholder="输入投资金额" style="float:left; width:200px; ">
-						  </div>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio">
-						    <span>全部</span>
-						  </div>
-						</div>
-						<div class="row">
-					  	<span>可投余额： </span>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio1" style="float:left">
-						    <input type="text" class="form-control" placeholder="输入可投余额" style="float:left; width:200px; ">
-						  </div>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio1">
-						    <span>不限制</span>
-						  </div>
-						</div>
-						<div class="row">
-					  	<span>项目期限： </span>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio2" style="float:left">
-						    <input type="text" class="form-control" placeholder="输入项目期限" style="float:left; width:200px; ">
-						  </div>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio2">
-						    <span>不限制</span>
-						  </div>
-						</div>
-						<div class="row">
-					  	<span>年化收益率： </span>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio3" style="float:left">
-						    <input type="text" class="form-control" placeholder="输入年化收益率" style="float:left; width:200px; ">
-						  </div>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio3">
-						    <span>不限制</span>
-						  </div>
-						</div>
-						<div class="row">
-					  	<span>规则状态： </span>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio4" style="float:left">
-						  	<span>开</span>
-						  </div>
-						  <div class="col-xs-3">
-						  	<input type="radio" name="radio4" style="float:left">
-						  	<span>关</span>
-						  </div>
-						</div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+<div id="app">
+	<div class="auto_table">
+		<table class="table table-hover">
+		  <tr>
+		  	<td>{{msg}}</td>
+		  	<td>{{msg1}}</td>
+		  	<td>{{msg2}}</td>
+		  	<td>{{msg3}}</td>
+		  	<td>{{msg4}}</td>
+		  	<td>{{msg5}}</td>
+		  	<td>{{msg6}}</td>
+		  </tr>
+		  <tr>
+		  	<td>关</td>
+		  	<td>全部</td>
+		  	<td>无限制</td>
+		  	<td>无限制</td>
+		  	<td>无限制</td>
+		  	<td>123</td>
+		  	<td>1</td>
+		  </tr>
+		</table>
 	</div>
-	
+	<div class="auto_setting">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">设置</button>
+	</div>
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	      	<h4 class="modal-title" id="gridSystemModalLabel">设置</h4>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body">
+				  <div class="row">
+				  	<span>投资金额： </span>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio" style="float:left">
+					    <input type="text" class="form-control" placeholder="输入投资金额" style="float:left; width:200px; ">
+					  </div>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio">
+					    <span>全部</span>
+					  </div>
+					</div>
+					<div class="row">
+				  	<span>可投余额： </span>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio1" style="float:left">
+					    <input type="text" class="form-control" placeholder="输入可投余额" style="float:left; width:200px; ">
+					  </div>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio1">
+					    <span>不限制</span>
+					  </div>
+					</div>
+					<div class="row">
+				  	<span>项目期限： </span>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio2" style="float:left">
+					    <input type="text" class="form-control" placeholder="输入项目期限" style="float:left; width:200px; ">
+					  </div>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio2">
+					    <span>不限制</span>
+					  </div>
+					</div>
+					<div class="row">
+				  	<span>年化收益率： </span>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio3" style="float:left">
+					    <input type="text" class="form-control" placeholder="输入年化收益率" style="float:left; width:200px; ">
+					  </div>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio3">
+					    <span>不限制</span>
+					  </div>
+					</div>
+					<div class="row">
+				  	<span>规则状态： </span>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio4" style="float:left">
+					  	<span>开</span>
+					  </div>
+					  <div class="col-xs-3">
+					  	<input type="radio" name="radio4" style="float:left">
+					  	<span>关</span>
+					  </div>
+					</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
 <script>
 	new Vue({
     el: '#app',
@@ -121,6 +112,3 @@
     }
   })
 </script>
-</body>
-
-</html>

@@ -10,3 +10,30 @@ h1,h2,h3,h4,h5,h6{ margin:0; padding:0; font-weight:normal; font-size:14px;font-
 .row{margin-top: 20px;}
 .row input{ display: block; float: left; margin-left: 20px;}
 .row span{display: block; float: left; width: 200px; line-height: 18px;margin-left: 10px;}
+.background-login{
+	width: 100%;
+	background-image: url('https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/55.jpg?2');
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	/*min-width: 1000px;*/
+	background-position: center 0;
+}
+.login-title{
+	font-size: 28px;
+	text-align: center;
+	color: #fff;
+}
+.background-register{
+	width: 100%;
+	background-image: url('https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/57.jpg?2');
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	/*min-width: 1000px;*/
+	background-position: center 0;
+}
