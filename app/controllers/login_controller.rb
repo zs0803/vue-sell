@@ -7,7 +7,7 @@ class LoginController < ApplicationController
   def create
     @register = Login.new(register_params)
     if @register.save
-    	render 'index'
+      render :status => 200, :json => { :success => true, :info => "谢谢"}
     else
     	render 'register'
     end
