@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707052416) do
+ActiveRecord::Schema.define(version: 20170707083925) do
 
   create_table "logins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "usename"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170707052416) do
     t.decimal  "ketou_money",       precision: 10
     t.string   "term"
     t.decimal  "apr",               precision: 10
-    t.integer  "absolute_ranking"
+    t.decimal  "absolute_ranking",  precision: 10
     t.integer  "effective_ranking"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false

@@ -5,10 +5,11 @@
         <div class="panel-heading">
           <div class="panel-title login-title">注册</div>
         </div>
-        <form action="/login/create" method="post">
+        <form id="form">
+          <div id="result"></div>
           <div style="padding-top:30px" class="panel-body">
             <div style="margin-bottom: 25px" class="input-group">
-              <input type="text" placeholder="用户名" class="form-control" name="usename">
+              <input type="text" placeholder="用户名" class="form-control" name="usename" id="usename">
             </div>
             <div style="margin-bottom: 25px" class="input-group">
               <input type="password" placeholder="输入密码" class="form-control" name="password" id="password">
@@ -29,11 +30,29 @@
   </div>
 </div>
 <script>
+$(document).ready(function(){
   $("#submit_btn").click(function(){
     var password_val = $("#password").val();
     var confirm_password_val = $("#confirm_password").val();
     if (password_val != confirm_password_val) {
       alert("俩次密码输入不相等，请重新输入")
     }
+    $.ajax({
+      type:"POST",
+      url:"/login/create",
+      dataType:'json',
+      data:{
+        usename:$("#usename").val(),
+        password:$("#password").val(),
+      },
+      success: function(data){
+        if (data.success) {
+          $("#result").html("成功")
+        }else{
+          $("#result").html("不成功")
+        }
+      }
+    })
   })
+})
 </script>
