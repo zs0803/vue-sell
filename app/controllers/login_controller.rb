@@ -6,13 +6,16 @@ class LoginController < ApplicationController
   end
   def create
     @register = Login.new(register_params)
-    if @register.save
-      render :status => 200, :json => { :success => true, :info => "谢谢"}
+    if simple_captcha_valid?
+      if @register.save
+        render :status => 200, :json => { :success => true, :info => "谢谢"}
+      else
+        render 'register'
+      end
     else
-    	render 'register'
+      render :register
     end
     
-  	
   end
 
   private
